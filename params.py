@@ -1,6 +1,6 @@
-z_dim = 1
+in_dim = 1
 # data points
-x_dim = 10
+out_dim = 10
 
 # generator hidden layers
 gen_hidden = 10

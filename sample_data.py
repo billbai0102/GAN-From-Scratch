@@ -10,7 +10,7 @@ def sample():
     shift = np.random.uniform(0, 1)
     frequency = np.random.uniform(1, 1.3)
     multiplier = np.random.uniform(.5, .8)
-    data = [multiplier * np.sin(shift + frequency * i) for i in range(params.x_dim)]
+    data = [multiplier * np.sin(shift + frequency * i) for i in range(params.out_dim)]
     return data
 
 
