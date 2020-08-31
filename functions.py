@@ -40,7 +40,7 @@ class Weights:
         """
         scale = np.sqrt(2. / (in_c + out_c))
         weights = np.random.uniform(-scale, scale, (in_c, out_c))
-        print(f'Weights initialized: {weights}')
+        # print(f'Weights initialized: {weights}')
         return weights
 
 
@@ -52,10 +52,10 @@ class Activation:
         :param x: input
         :return: max(x, 0)
         """
-        return max(x, 0.)
+        return np.maximum(x, 0.)
 
     @classmethod
-    def LeakyReLU(cls, x, k):
+    def LeakyReLU(cls, x, k=.2):
         """
         Leaky ReLU activator
         :param x: input
@@ -92,7 +92,7 @@ class Activation:
         return Activation.ReLU(x)
 
     @classmethod
-    def dLeakyReLU(cls, x, k):
+    def dLeakyReLU(cls, x, k=.2):
         """
         Derivative of LeakyReLU for calculating gradients
         :param x: input
